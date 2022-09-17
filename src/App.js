@@ -1,12 +1,18 @@
-import CardGenerator from "./Cards/CardGenerator";
+import GameInitializer from "./Game/GameInitializer";
 
 function App() {
-  return (
-    <div>
-      <CardGenerator />
-      <h1>El valor actual es: </h1>
-    </div>
-  );
+  const newGame=true;
+  
+  if (newGame===true){
+    return (
+      <GameInitializer/>
+    );
+  }else{
+    return(
+      <h1>Bienvenido prro!</h1>
+    )
+  }
+
 }
 
 export default App;
