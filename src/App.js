@@ -1,4 +1,4 @@
-import GameInitializer from "./Game/GameInitializer";
+import GameInitializer from "./Components/GameLogic/GameInitializer";
 
 function App() {
   const newGame=true;
