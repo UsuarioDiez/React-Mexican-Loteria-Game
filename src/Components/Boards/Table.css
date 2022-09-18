@@ -1,0 +1,15 @@
+.table{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cpu_boards{
+    width:60vh;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.user_board{
+    width: 60vh;
+    margin-left: 10rem;
+}

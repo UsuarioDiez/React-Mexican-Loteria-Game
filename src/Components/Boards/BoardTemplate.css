@@ -1,0 +1,16 @@
+.board{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    border-style: outset;
+}
+
+.cell{
+    margin:-2px 0;
+    padding:0;
+}
+
+.board img {
+    object-fit: cover;
+    width: 100%;
+    
+  }

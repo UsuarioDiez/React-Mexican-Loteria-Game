@@ -1,0 +1,15 @@
+.cards_zone{
+    display: flex;
+    width:20%;
+    margin: auto;
+
+    justify-content: right;
+}
+
+.table_zone{
+    width:80%;
+}
+
+.playground{
+    display:flex;
+}

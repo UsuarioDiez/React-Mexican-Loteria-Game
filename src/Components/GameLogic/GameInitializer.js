@@ -1,3 +1,4 @@
+import ContextProvider from "../Context/ContextProvider";
 import ActiveGame from "./ActiveGame"
 
 let arr=[];
@@ -19,7 +20,9 @@ function shuffleArray(array) {
 function GameInitializer(){
     const new_set=shuffleArray(arr)
     return(    
-    <ActiveGame new_set={new_set}/>
+    <ContextProvider>
+      <ActiveGame new_set={new_set}/>
+    </ContextProvider	>
     )
 }
 
