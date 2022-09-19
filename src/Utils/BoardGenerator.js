@@ -8,11 +8,8 @@ export function BoardGenerator(){
             cardsArray.push(rand);
         }
     }
-    console.log(cardsArray)
     for (let i=0;i<=3;i++){
         new_board.push([cardsArray[4*i],cardsArray[4*i+1],cardsArray[4*i+2],cardsArray[4*i+3]])
     }
-
-    console.log(new_board)
     return new_board;
 }

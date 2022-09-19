@@ -1,0 +1,15 @@
+.cell{
+    position: relative;
+}
+
+.cell-img{
+    position:relative;
+    z-index: 0;
+
+}
+.cell-cap{
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1;
+}
+

@@ -1,9 +1,10 @@
-import ContextProvider from "../Context/ContextProvider";
+import CurrentCardContextProvider from "../Context/CurrentCardContextProvider";
+import WinnerContextProvider from "../Context/WinnerContextProvider";
 import ActiveGame from "./ActiveGame"
 
 let arr=[];
 for (let i=0;i<=53;i++){
-  arr[i]=i+1;
+  arr[i]=i;
 }
 
 function shuffleArray(array) {
@@ -19,10 +20,13 @@ function shuffleArray(array) {
 
 function GameInitializer(){
     const new_set=shuffleArray(arr)
-    return(    
-    <ContextProvider>
-      <ActiveGame new_set={new_set}/>
-    </ContextProvider	>
+    return(
+      <WinnerContextProvider>
+        <CurrentCardContextProvider new_set_first={new_set[0]}>
+          <ActiveGame new_set={new_set}/>
+        </CurrentCardContextProvider	>
+      </WinnerContextProvider>
+
     )
 }
 

@@ -1,14 +1,24 @@
-import {useContext} from 'react';
-import {CardContext} from '../Context/ContextProvider';
+import {useContext, useEffect} from 'react';
+import {CardContext} from '../Context/CurrentCardContextProvider';
 import BoardTemplate from './BoardTemplate';
+import { WinnerContext } from "../Context/WinnerContextProvider";
 
+let countCoveredCells=0
+function CpuBoard(props){
+    const {currentCard}=useContext(CardContext)
+    const {setIsWinner}=useContext(WinnerContext)
 
-function CpuBoard({cpuBoard}){
-    const {currentCard}=useContext(CardContext);
+    useEffect(()=>{
+        if (props.cpuCellsSet.includes(currentCard)){
+            countCoveredCells++;
+            console.log("cuenta local: "+countCoveredCells);
+        }
+    })
 
-    return (
-        <BoardTemplate boardSet={cpuBoard}/>
-)
+    
+    return(<div>
+        <BoardTemplate boardSet={props.cpuBoard}/>
+    </div>) 
     
 }
 

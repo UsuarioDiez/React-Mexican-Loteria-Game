@@ -2,8 +2,8 @@ import { createContext, useState } from "react";
 
 export const CardContext=createContext();
 
-function ContextProvider(props){
-    const [currentCard, setCurrentCard] = useState(0);
+function CurrentCardContextProvider(props){
+    const [currentCard, setCurrentCard] = useState(props.new_set_first);
     return(
         <CardContext.Provider value={{
             currentCard,
@@ -13,4 +13,4 @@ function ContextProvider(props){
         </CardContext.Provider>);
 }
 
-export default ContextProvider;
+export default CurrentCardContextProvider;

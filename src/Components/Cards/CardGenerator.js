@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CardContext } from "../Context/ContextProvider";
+import { CardContext } from "../Context/CurrentCardContextProvider";
 import CardRepository from "./CardRepository";
 import Card from "./Card";
 

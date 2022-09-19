@@ -1,6 +1,6 @@
 let cartas = [];
-for (var i = 0; i <= 54; i++) {
-  cartas[i] = "/cartas/" + (i) + ".jpg";
+for (var i = 0; i <= 53; i++) {
+  cartas[i] = "/cartas/" + (i+1) + ".jpg";
 }
 
 function CardRepository(props) {
