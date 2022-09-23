@@ -11,8 +11,8 @@ function ActiveGame(props){
     const {setCurrentCard}=useContext(CardContext);
     const {isWinner}=useContext(WinnerContext)
     init++;
-    if (init<=53 && !isWinner){
-        setTimeout(() => setCurrentCard(props.new_set[init]), 2000);
+    if (init<=5 && !isWinner){
+        setTimeout(() => setCurrentCard(props.new_set[init]), 200);
     }
 
     const activeGame=(<div className="playground">
