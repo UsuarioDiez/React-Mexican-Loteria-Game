@@ -2,6 +2,8 @@
     display:grid;
     grid-template-columns: repeat(4,1fr);
     border-style: outset;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
 }
 
 .cell-board{
@@ -12,5 +14,8 @@
 .board img {
     object-fit: cover;
     width: 100%;
-    
   }
+
+.winner-board{
+    border: 5px solid black;
+}

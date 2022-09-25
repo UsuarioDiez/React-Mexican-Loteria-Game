@@ -1,12 +1,21 @@
 import "./Cell.css";
-import {useContext,useEffect,useState} from "react";
+import {useContext,useEffect,useRef,useState} from "react";
 import {CardContext} from '../Context/CurrentCardContextProvider';
-
-let output;
+import { WinnerContext } from "../Context/WinnerContextProvider";
+import {NewGameContext} from "../Context/NewGameContextProvider"
 
 function Cell(props) {
+    let output;
     const {currentCard}=useContext(CardContext);
-    const [isCovered,setIsCovered]=useState(false);
+    let isCovered=useRef(false);
+    let tmpNewGame=useRef(0);
+    const {newGame}=useContext(NewGameContext);
+    const {isWinner}=useContext(WinnerContext);
+
+    if (tmpNewGame.current!==newGame){
+      isCovered.current=false;
+    }
+    tmpNewGame.current=newGame;
 
     const coveredCell=(<div className="cell">
       <div className="cell-img">{props.children}</div>
@@ -15,11 +24,11 @@ function Cell(props) {
     
     const normalCell=<div className="cell-img">{props.children}</div>;
 
-    if (props.boardCard===currentCard && !isCovered){
-      props.coveredCellsHandler(currentCard);
-      setIsCovered(true);
+    if (props.boardCard===currentCard && !isCovered.current && !isWinner){
+      isCovered.current=true;
+      props.setCoveredCellsPointer(props.boardCard);
       output=coveredCell;
-    }else if(isCovered){
+    }else if(isCovered.current){
       output=coveredCell;
     }else{
       output=normalCell;

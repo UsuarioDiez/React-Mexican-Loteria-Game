@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 
-export const WinnerContext=createContext();
+export const WinnerContext=createContext({isWinner:false,whoIs:"",setIsWinner:()=>{}});
 
 function WinnerContextProvider(props){
-    const [isWinner, setIsWinner] = useState(false);
+    const [isWinner,setIsWinner]=useState(false);
 
     return(
         <WinnerContext.Provider value={{

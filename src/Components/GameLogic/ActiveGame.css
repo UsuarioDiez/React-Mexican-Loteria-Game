@@ -1,8 +1,8 @@
 .cards_zone{
-    display: flex;
-    width:20%;
+    width:15%;
     margin: auto;
     justify-content: right;
+    margin-left: 5rem;
 }
 
 .table_zone{
@@ -11,4 +11,45 @@
 
 .playground{
     display:flex;
+}
+
+.winner-message{
+    margin-right: -130px;
+    height: 15rem;
+    color:white;
+    display: flex; 
+    align-items: center;
+    text-align: center;
+    display:inline-block;
+    background-color: brown;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border: 5px solid black;
+    border-radius: 40px;
+}
+
+.winner-message h1{
+    padding-left: 1.5rem;
+    width:80%;
+    font-size: 4vw;
+}
+
+button{
+    position:absolute;
+    bottom: 2rem;
+    left: 3rem;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    width: 7rem;
+    height: 3rem;
+}
+
+button:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer;
+    transition-duration: 0s;
+}
+
+button:active{
+    background-color:#39803b;
 }

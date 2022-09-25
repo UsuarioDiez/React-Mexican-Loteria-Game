@@ -1,18 +1,15 @@
 import GameInitializer from "./Components/GameLogic/GameInitializer";
+import {useContext, useState} from "react"
+import {NewGameContext} from "./Components/Context/NewGameContextProvider"
+import NewGameContextProvider from "./Components/Context/NewGameContextProvider";
+
 
 function App() {
-  const newGame=true;
-  
-  if (newGame===true){
-    return (
+    return (  
+    <NewGameContextProvider>
       <GameInitializer/>
-    );
-  }else{
-    return(
-      <h1>Bienvenido prro!</h1>
-    )
-  }
-
+    </NewGameContextProvider>
+)
 }
 
 export default App;

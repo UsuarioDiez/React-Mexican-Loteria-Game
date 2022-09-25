@@ -5,13 +5,9 @@ import WinnerChecker from '../../Utils/WinnerChecker';
 
 
 function CpuBoard(props){
-    const {setIsWinner}=useContext(WinnerContext)
 
-    const coveredCellsSetter=(coveredCellsFromTemplate)=>{
-        WinnerChecker(coveredCellsFromTemplate,props.cpuBoard)
-    }
     return(<div>
-        <BoardTemplate boardSet={props.cpuBoard} coveredCellsGetter={coveredCellsSetter}/>
+        <BoardTemplate boardSet={props.cpuBoard}/>
     </div>) 
     
 }
