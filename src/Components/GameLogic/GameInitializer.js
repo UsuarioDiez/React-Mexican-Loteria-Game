@@ -8,8 +8,6 @@ import { NewGameContext } from "../Context/NewGameContextProvider";
 
 function GameInitializer(){
   const {newGame}=useContext(NewGameContext);
-
-  console.log("me ejecutooo GameInitializer")
   const {setIsWinner}=useContext(WinnerContext);
   setIsWinner(false);
     let arr=[];
