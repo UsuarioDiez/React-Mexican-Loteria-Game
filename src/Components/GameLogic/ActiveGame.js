@@ -31,7 +31,7 @@ function ActiveGame(props){
                 setCurrentCard(props.new_set[initprueba.current])
 
             }
-        }, 300);
+        }, 1000);
     }
 
     return (<div className="playground">
